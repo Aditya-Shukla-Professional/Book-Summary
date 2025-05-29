@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Book Collection</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1><%= username %>'s Book Collection</h1>
+      <div class="filter-controls">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="title" <%= sort === 'title' || !sort ? 'selected' : '' %>>Title</option>
+          <option value="newest" <%= sort === 'newest' ? 'selected' : '' %>>Newest</option>
+          <option value="oldest" <%= sort === 'oldest' ? 'selected' : '' %>>Oldest</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <button class="add-book-button">
+        + Add Book
+      </button>
+      <div id="books-container">
+        <!-- Book Card -->
+        <% if (Array.isArray(data) && data.length > 0) { %>
+          <% for(let i=0;i<data.length;i++){ %>
+          <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/<%= data[i].isbn %>-L.jpg" alt="Book Cover" />
+            <div class="book-info">
+              <h2 class="book-title"><%= data[i].title %></h2>
+              <p class="read-date">Read on: <%= data[i].created_at.toISOString().substring(0, 10) %></p>
+              <p class="book-summary">
+                <%= data[i].summary %>
+              </p>
+              <input class="id-tracker" type="hidden" value="<%= data[i].id %>"/>
+              <input class="isbn-tracker" type="hidden" value="<%= data[i].isbn %>"/>
+              <div class="card-buttons">
+                <button class="update">Update</button>
+                <button class="del">Delete</button>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        <% } %>
+      </div>
+    </main>
+
+    <div class="form-overlay" id="formOverlay">
+      <form class="book-form" id="bookForm" action="/submit" method="POST">
+        <button type="button" class="close-btn">✕</button>
+        <h2 id="formTitle">Add / Update Book</h2>
+
+        <!-- Hidden input to tell if we're adding or updating -->
+        <input type="hidden" name="action" id="formAction" value="" />
+
+        <!-- Hidden input to hold book ID when updating -->
+        <input type="hidden" name="bookId" id="bookId" value="" />
+
+        <input type="text" name="title" id="bookTitleInput" placeholder="Book Title" required/>
+
+        <textarea name="summary" id="bookSummaryInput" placeholder="Book Summary" required></textarea>
+
+        <input type="text" name="isbn" id="bookISBNInput" placeholder="ISBN" required/>
+
+        <button type="submit" id="submit-form">Save</button>
+      </form>
+    </div>
+
+
+    <footer>
+      <p>
+        &copy; 2025 Aditya's Book Collection | Made with ❤️ By Aditya Shukla
+      </p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="brain/main.js"></script>
+  </body>
+</html>
