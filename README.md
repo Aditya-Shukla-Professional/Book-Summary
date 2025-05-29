@@ -1,106 +1,87 @@
-<h1 align="center">📚 Book Summary Web App</h1>
+📚 Book Summary Web App
+=======================
 
-<p align="center">
-  <strong>Developed by:</strong> Aditya Shukla<br>
-  <a href="https://github.com/Aditya-Shukla-Professional/Book-Summary.git">GitHub Repository</a>
-</p>
+**Developed by:** Aditya Shukla  
+[GitHub Repository](https://github.com/Aditya-Shukla-Professional/Book-Summary.git)
 
-<hr>
+* * *
 
-<h2>🔐 Secure Login System</h2>
-<p>
-  This web application features a secure user authentication system where:
-</p>
-<ul>
-  <li>Passwords are <strong>hashed and salted</strong> for maximum protection.</li>
-  <li>Only registered users can log in and access the main functionality.</li>
-</ul>
+🔐 Secure Login System
+----------------------
 
-<hr>
+This web application features a secure user authentication system where:
 
-<h2>📖 Core Features</h2>
-<p>Once logged in, users can:</p>
-<ul>
-  <li>📝 Enter a <strong>Book Title</strong></li>
-  <li>📄 Write and save their own <strong>Book Summary</strong></li>
-  <li>🔢 Input the <strong>ISBN number</strong></li>
-</ul>
-<p>
-  All entries are securely stored and linked to the logged-in user's account.
-</p>
+*   Passwords are **hashed and salted** for maximum protection.
+*   Only registered users can log in and access the main functionality.
 
-<hr>
+* * *
 
-<h2>⚙️ How to Fork & Run Locally</h2>
+📖 Core Features
+----------------
 
-<ol>
-  <li>
-    <strong>Fork the Repository</strong><br>
-    Click the <em>Fork</em> button on the top-right corner of the 
-    <a href="https://github.com/Aditya-Shukla-Professional/Book-Summary.git">repository</a>.
-  </li>
-  <li>
-    <strong>Clone Your Fork</strong><br>
-    Open a terminal and run:<br>
-    <code>git clone https://github.com/your-username/Book-Summary.git</code>
-  </li>
-  <li>
-    <strong>Install Dependencies</strong><br>
-    Navigate into the project folder:<br>
-    <code>cd Book-Summary</code><br>
-    Then run:<br>
-    <code>npm install</code>
-  </li>
-  <li>
-    <strong>Set Environment Variable</strong><br>
-    Create a file named <code>.env</code> in the root directory with:<br>
-    <pre>
-SESSION_SECRET=your_secure_random_string
-    </pre>
-    Replace <code>your_secure_random_string</code> with a long, random string.
-  </li>
-  <li>
-    <strong>Run the App</strong><br>
-    Start the server with:<br>
-    <code>node app.js</code><br>
-    Or, for automatic restarts on file change:<br>
-    <code>npx nodemon app.js</code>
-  </li>
-  <li>
-    <strong>Access Locally</strong><br>
-    Open your browser and visit:<br>
-    <a href="http://localhost:3000">http://localhost:3000</a>
-  </li>
-</ol>
+Once logged in, users can:
 
-<hr>
+*   📝 Enter a **Book Title**
+*   📄 Write and save their own **Book Summary**
+*   🔢 Input the **ISBN number**
 
-<h2>🚀 Live Demo</h2>
-<p>
-  Experience the app live at:<br>
-  <a href="https://book-summary-sffp.onrender.com" target="_blank">
-    https://book-summary-sffp.onrender.com
-  </a>
-</p>
+All entries are securely stored and linked to the logged-in user's account.
 
-<hr>
+* * *
 
-<h2>📌 Please Note</h2>
-<p>
-  This is a student project created by Aditya Shukla using the <strong>free tier</strong> of:
-</p>
-<ul>
-  <li>🖥️ <strong>Render</strong> (for web hosting)</li>
-  <li>🗃️ <strong>PostgreSQL</strong> (for database)</li>
-</ul>
-<p>
-  Because of this, the live version may occasionally go to sleep or stop working if resource limits are exceeded.
-</p>
+⚙️ How to Fork & Run Locally
+----------------------------
 
-<hr>
+1.  **Fork the Repository**  
+    Click the _Fork_ button on the top-right corner of the [repository](https://github.com/Aditya-Shukla-Professional/Book-Summary.git).
+2.  **Clone Your Fork**  
+    Open a terminal and run:  
+    `git clone https://github.com/your-username/Book-Summary.git`
+3.  **Install Dependencies**  
+    Navigate into the project folder:  
+    `cd Book-Summary`  
+    Then run:  
+    `npm install`
+4.  **Set Environment Variable**  
+    Create a file named `.env` in the root directory with:  
+    
+    SESSION\_SECRET=your\_secure\_random\_string
+        
+    
+    Replace `your_secure_random_string` with a long, random string.
+5.  **Run the App**  
+    Start the server with:  
+    `node app.js`  
+    Or, for automatic restarts on file change:  
+    `npx nodemon app.js`
+6.  **Access Locally**  
+    Open your browser and visit:  
+    [http://localhost:3000](http://localhost:3000)
 
-<h2>💬 Feedback or Issues?</h2>
-<p>
-  Found a bug? Have a suggestion? Want to contribute?<br>
-  Feel free to <a href="https://github.com/Aditya-Shukla-Professional/Book-Summary/issues">open an issue</a> or submit a pull request!
-</p>
+* * *
+
+🚀 Live Demo
+------------
+
+Experience the app live at:  
+[https://book-summary-sffp.onrender.com](https://book-summary-sffp.onrender.com)
+
+* * *
+
+📌 Please Note
+--------------
+
+This is a student project created by Aditya Shukla using the **free tier** of:
+
+*   🖥️ **Render** (for web hosting)
+*   🗃️ **PostgreSQL** (for database)
+
+Because of this, the live version may occasionally go to sleep or stop working if resource limits are exceeded.
+
+* * *
+
+💬 Feedback or Issues?
+----------------------
+
+Found a bug? Have a suggestion? Want to contribute?  
+Feel free to [open an issue](https://github.com/Aditya-Shukla-Professional/Book-Summary/issues) or submit a pull request!
