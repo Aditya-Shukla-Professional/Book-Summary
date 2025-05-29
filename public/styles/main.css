@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1e293b;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.filter-controls {
+  margin-top: 1rem;
+}
+
+.filter-controls select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  cursor: pointer;
+}
+
+main {
+  padding: 2rem 4vw;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#books-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.book-card {
+  background: linear-gradient(135deg, #1e293b, #334155);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.book-card img {
+  width: 220px;
+  height: auto;
+  object-fit: cover;
+}
+
+.book-info {
+  padding: 2rem;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.book-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: #fcd34d;
+}
+
+.read-date {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.book-summary {
+  font-size: 1.15rem;
+  color: #f1f5f9;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.card-buttons button {
+  background-color: #fcd34d;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.card-buttons button:hover {
+  background-color: #eab308;
+}
+
+.add-book-button {
+  margin: 2rem auto;
+  display: block;
+  background-color: #10b981;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-book-button:hover {
+  background-color: #059669;
+}
+
+footer {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+  margin-top: 4rem;
+  border-top: 3px solid #fcd34d;
+}
+
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* display: flex;  use this for making the form visible */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.book-form {
+  background: linear-gradient(135deg, #1e293b, #334155);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: #f1f5f9;
+}
+
+.book-form h2 {
+  color: #fcd34d;
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-form input,
+.book-form textarea {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.book-form textarea {
+  text-align: left;         
+  vertical-align: top;       
+  padding-top: 0.75rem;     
+  line-height: 1.5;         
+}
+
+.book-form input:focus,
+.book-form textarea:focus {
+  outline: none;
+  border-color: #fcd34d;
+}
+
+.book-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.book-form button {
+  background-color: #fcd34d;
+  color: #1f2937;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-form button:hover {
+  background-color: #eab308;
+}
+
+.book-form {
+  position: relative;
+  /* needed for positioning the X button inside */
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  color: #f1f5f9;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #fcd34d;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .book-card {
+    flex-direction: column;
+    margin: 0rem 1rem;
+  }
+
+  .book-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .book-info {
+    padding: 1.25rem;
+  }
+
+  .book-title {
+    font-size: 1.6rem;
+  }
+
+  .read-date {
+    font-size: 1rem;
+  }
+
+  .book-summary {
+    font-size: 1rem;
+  }
+
+  .filter-controls {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .filter-controls select {
+    width: 100%;
+  }
+}
