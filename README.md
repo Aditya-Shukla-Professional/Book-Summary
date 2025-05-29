@@ -84,3 +84,13 @@ Because of this, the live version may occasionally go to sleep or stop working i
 
 Found a bug? Have a suggestion? Want to contribute?  
 Feel free to [open an issue](https://github.com/Aditya-Shukla-Professional/Book-Summary/issues) or submit a pull request!
+
+* * *
+
+### Connect with me:
+
+<p align="left">
+<a href="https://www.linkedin.com/in/aditya-shukla-8b3494341/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="aditya shukla" height="30" width="40" /></a>
+</p>
+
+**Made with ❤️ by Aditya Shukla**
