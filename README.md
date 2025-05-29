@@ -1,7 +1,7 @@
 📚 Book Summary Web App
 =======================
 
-**Developed by:** Aditya Shukla  [GitHub Repository](https://github.com/Aditya-Shukla-Professional/Book-Summary.git)
+**Developed by:** Aditya Shukla     [GitHub Repository](https://github.com/Aditya-Shukla-Professional/Book-Summary.git)
 
 * * *
 
